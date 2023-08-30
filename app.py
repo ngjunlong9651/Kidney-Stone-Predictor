@@ -3,8 +3,16 @@
 
 # In[1]:
 
-
+import pandas as pd
+import sklearn
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 from flask import Flask, render_template, request
+from PIL import Image
+import streamlit as st
+import matplotlib.pyplot as plt
+import seaborn as sns   
+st.write("This project was prepared fro Prof Teo # Placeholder text ")
 
 app = Flask(__name__)
 
