@@ -1,21 +1,26 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+## Importing the libraries required for streamlit
+import os
+import streamlit as st ## Streamlit library for creating the web app
+from PIL import Image ## Image library for displaying images
+from streamlit_option_menu import option_menu ## What should be displayed on the side bar? 
+from streamlit_oauth import OAuth2Component ## For login credentials for potential follow up pages?
 
-import pandas as pd
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split
-from flask import Flask, render_template, request
-from PIL import Image
-import streamlit as st
-import matplotlib.pyplot as plt
-import seaborn as sns   
+## Creating a side bar for the user
+with st.sidebar:
+    selected = option_menu("Kidney Stone Prediction App", ["Home", 'Kidney Stone Predictor', 'Next Steps'], 
+        icons=['house-door-fill', 'hospital-fill', 'emoji-smile-fill'], menu_icon="cast", default_index=1)
+    selected
+    
 st.write("This project was prepared fro Prof Teo # Placeholder text ")
 image = Image.open('placeholder-image.png')
 st.image(image, caption='Placeholder image',use_column_width=True)
 
 
 st.subheader('Please enter the relevant details below')
+
 def get_user_input():
     gravity = st.number_input("gravity")
     ph = st.number_input("ph")
