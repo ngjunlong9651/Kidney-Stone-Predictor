@@ -15,19 +15,19 @@ with st.sidebar:
     selected
     
 st.write("This project was prepared fro Prof Teo # Placeholder text ")
-image = Image.open('placeholder-image.png')
+image = Image.open('pneumonia inception v3.jpeg')
 st.image(image, caption='Placeholder image',use_column_width=True)
 
 
 st.subheader('Please enter the relevant details below')
 
 def get_user_input():
-    gravity = st.number_input("gravity")
-    ph = st.number_input("ph")
-    osmo = st.number_input("osmo")
-    cond = st.number_input("cond")
-    urea = st.number_input("urea")
-    calc = st.number_input("calc")
+    gravity = st.number_input("Please enter the gravity here: 👇")
+    ph = st.number_input("Please enter the PH level here: 👇")
+    osmo = st.number_input("Please enter the osmo here: 👇")
+    cond = st.number_input("Please enter the condition here: 👇")
+    urea = st.number_input("Please enter the urea here: 👇")
+    calc = st.number_input("Please enter the calc here: 👇")
     prediction = -0.04191465 + (gravity * -3.94579654e-02) + (ph * -3.94579654e-02) + (osmo * 3.05883681e-04) + (cond * -8.53476004e-02) + (urea * 1.12604054e-03) + (calc * 7.20512124e-01)
     return prediction
 
