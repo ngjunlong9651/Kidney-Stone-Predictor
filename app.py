@@ -33,14 +33,12 @@ def get_user_input():
 
 prediction = get_user_input()
 
-st.subheader('Submit information: ')
-st.button('Submit')
+st.subheader('Press the button below to submit your information and get results: ')
+if st.button('Submit information!'):
+    st.subheader("These are your results: ")
+    st.write(prediction)
 
 
-
-st.subheader('These are the results : ')
-## Writing the prediction here: 
-st.write(prediction)
 
 
 
