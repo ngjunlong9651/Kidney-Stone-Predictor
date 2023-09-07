@@ -36,7 +36,7 @@ prediction = get_user_input()
 st.subheader('Press the button below to submit your information and get results: ')
 if st.button('Submit information!'):
     st.subheader("These are your results: ")
-    st.write(prediction)
+    st.write(round(prediction),5)
 
 
 
