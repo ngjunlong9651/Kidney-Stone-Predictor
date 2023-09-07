@@ -33,7 +33,11 @@ def get_user_input():
 
 prediction = get_user_input()
 
+st.subheader('Submit Results: ')
+
+
 st.subheader('These are the results : ')
+## Writing the prediction here: 
 st.write(prediction)
 
 
